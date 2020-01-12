@@ -8,8 +8,8 @@ import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { HttpClientModule } from "@angular/common/http";
-import { HttpPostService } from "./home/post/http-post.service";
 import { PostComponent } from "./home/post/post.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,8 +20,8 @@ import { PostComponent } from "./home/post/post.component";
     NavbarComponent,
     PostComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [HttpPostService],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

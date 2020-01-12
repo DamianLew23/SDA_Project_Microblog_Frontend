@@ -1,24 +1,24 @@
-<!-- Post /////-->
-<div class="card gedf-card">
-  <div class="card-header">
-    <div class="d-flex justify-content-between align-items-center">
+<div *ngFor="let post of posts" class="mt-4">
+  <!-- Post /////-->
+  <div class="card gedf-card">
+    <div class="card-header">
       <div class="d-flex justify-content-between align-items-center">
-        <div class="mr-2">
-          <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-        </div>
-        <div class="ml-2">
-          <div class="h5 m-0">@Nazwa Użytkownika</div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="ml-2">
+            <div class="h5 m-0">@{{post.userName}}</div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="card-body">
+      <p class="card-text">
+        {{post.content}}
+        <div class="card-footer">
+          <a href="#" class="card-link"><i class="fa fa-gittip"></i> Lubię to!</a>
+          <a href="#" class="card-link"><i class="fa fa-comment"></i> Komentarz</a>
+          <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Udostępnij</a>
+
+        </div>
+    </div>
+    <!-- Post /////-->
   </div>
-  <div class="card-body">
-    <p class="card-text">
-      Co słychać użytkowniku ?
-      <div class="card-footer">
-        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Lubię to!</a>
-        <a href="#" class="card-link"><i class="fa fa-comment"></i> Komentarz</a>
-        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Udostępnij</a>
-      </div>
-  </div>
-  <!-- Post /////-->

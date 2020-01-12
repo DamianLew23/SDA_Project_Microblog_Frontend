@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { HttpPostService } from "./http-post.service";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-post",
@@ -7,18 +6,15 @@ import { HttpPostService } from "./http-post.service";
   styleUrls: ["./post.component.css"]
 })
 export class PostComponent implements OnInit {
-  constructor(private httpPostService: HttpPostService) {}
+  constructor() {}
 
   ngOnInit() {}
 
-  getPosts() {
-    this.httpPostService.getPosts().subscribe(posts => {
-      console.log(posts);
-    });
-  }
+  @Input() posts;
 }
 
 export interface Post {
   id?: number;
-  content?: string;
+  contentText?: string;
+  userName?: string;
 }
